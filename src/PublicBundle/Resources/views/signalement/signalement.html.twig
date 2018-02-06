@@ -1,0 +1,16 @@
+{% extends "PublicBundle::layout.html.twig" %}
+
+{% block body %}
+<div class="col-md-1"></div>
+<div class="col-md-10">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2>Notification</h2>
+        </div>
+        <div class="panel-body">
+   <p>le message avec l'id :{{ messageFlag.id }}  à bien été signalé,
+    veuillez actualiser vos messages.</p>
+        </div>
+    </div>
+{% endblock body %}
+

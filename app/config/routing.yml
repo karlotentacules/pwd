@@ -1,0 +1,67 @@
+
+#Acceuil
+home:
+    path:      /home
+    defaults: { _controller: PublicBundle:Default:index }
+
+#login
+login:
+    path:    /login/
+    defaults: { _controller: AdminBundle:Default:loginRedirect }
+
+#Profil utilisateur
+profil:
+    path:      /Profil
+    defaults: { _controller: PublicBundle:Default:profil }
+
+ #message
+message:
+    path:      /message
+    defaults: { _controller: PublicBundle:Default:message }
+
+message_flag:
+    path:      /Profil/messagetoFlag
+    defaults: { _controller: PublicBundle:Default:messageFlag }
+
+admin:
+    path:      /Profil/administration
+    defaults: { _controller: AdminBundle:Default:index }
+
+adminBanUser:
+    path:      /Profil/administration/banUser
+    defaults: { _controller: AdminBundle:Default:banUser }
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+
+#HWIOAuthBundle routes
+hwi_oauth_security:
+    resource: "@HWIOAuthBundle/Resources/config/routing/login.xml"
+    prefix: /login
+
+hwi_oauth_connect:
+    resource: "@HWIOAuthBundle/Resources/config/routing/connect.xml"
+    prefix: /login
+
+hwi_oauth_redirect:
+    resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
+    prefix:   /login
+
+facebook_login:
+    path: /login/check-facebook
+
+
+
+
+
+public:
+    resource: "@PublicBundle/Resources/config/routing.yml"
+    prefix:   /
+
+admin:
+    resource: "@AdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+

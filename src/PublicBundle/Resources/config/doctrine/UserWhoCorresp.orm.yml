@@ -1,0 +1,20 @@
+PublicBundle\Entity\UserWhoCorresp:
+    type: entity
+    table: null
+    repositoryClass: PublicBundle\Repository\UserWhoCorrespRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        userWhoSearch:
+            type: string
+            length: 255
+        userWhorCorresp:
+            type: array
+        resultDate:
+            type: datetime
+            length: 255
+    lifecycleCallbacks: {  }

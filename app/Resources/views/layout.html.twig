@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link href=" {{asset("ressources/css/bootstrap-social.css") }}" rel="stylesheet">
+    <link href=" {{asset("ressources/css/bootstrap.css") }}" rel="stylesheet">
+    <link href=" {{asset("ressources/css/style.css") }}" rel="stylesheet">
+    <link href=" {{asset("ressources/font-awesome/css/font-awesome.css/font-awesome.min.css") }}" rel="stylesheet">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>

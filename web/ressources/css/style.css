@@ -1,0 +1,67 @@
+
+
+body{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+
+}
+li{
+    color: #4665B9;
+}
+.messages{
+    /*background-color: #BF3E26;*/
+    font-size: 13pt;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.messages , .message p{
+    color:#4665B9;
+}
+.btn-danger{
+    background-color: white !important;
+    border: 1px solid #4665b9;
+    color: #4665B9!important;
+}
+.btn-danger p{
+    color: #4665B9;
+}
+.messages a:hover ,.messages a:focus , .messages a:visited{
+    color:white;
+    background-color: #4665B9;
+
+}
+.pagination > li > a,
+.pagination > li > span{
+    color: #4665B9;
+
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus{
+    background-color: #FFFFFF;
+    color:#4665B9;
+    border: 1px solid #4665B9;
+
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus{
+    background-color: #4665B9;
+    color: #ffffff;
+    border: 1px solid #4665B9;
+}
+
+th, td{
+    padding: 20px 20px 10px 20px;
+}
+#publicbundle_search_submit{
+    border: 1 px solid white!important;
+    background-color: #4665B9;
+  }

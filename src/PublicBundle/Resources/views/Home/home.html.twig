@@ -1,0 +1,21 @@
+
+{% include "PublicBundle::layout.html.twig" %}
+
+{% block body %}
+    <div class="col-md-4"></div>
+    <div class="col-md-4 ">
+       <h2 class=" text-center">Bienvenue sur ce site de rencontre </h2> </br>
+        <h2 class="text-center">Pour  poursuivre et vous identifiez cliquez </br> ci-dessous.</h2>
+
+
+        {% for owner in hwi_oauth_resource_owners() %}
+            <a class="btn btn-block btn-social btn-facebook" href="{{ hwi_oauth_login_url(owner) }}"><i class="fa fa-facebook"></i> Sign in with {{ owner | trans({}, 'HWIOAuthBundle') }}</a> <br />
+        {% endfor %}
+    </div>
+    <div class="col-md-4"></div>
+    <div class="clearfix"></div>
+    <div class="col-md-2"></div>
+    <div class="col-md-10"><a href="">Conditions d'utilisation</a></div>
+    <div class="clearfix"></div>
+
+{% endblock body %}

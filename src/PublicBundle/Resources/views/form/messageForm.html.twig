@@ -1,0 +1,18 @@
+{% extends "PublicBundle::layout.html.twig" %}
+{% block body %}
+<div class="col-md-1"></div>
+<div class="col-md-10">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2>Message</h2>
+        </div>
+        <div class="panel-body">
+            <div class="form">
+                {{ form (messageForm) }}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-1"></div>
+<div class="clearfix"></div>
+{% endblock body %}

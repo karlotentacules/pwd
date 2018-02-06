@@ -1,0 +1,35 @@
+PublicBundle\Entity\Search:
+    type: entity
+    table: null
+    repositoryClass: PublicBundle\Repository\SearchRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+
+        user:
+            type: string
+            length: 255
+        searchingFor:
+            type: string
+            length: 255
+        searchingGender:
+            type: array
+            length: 255
+        searchingDist:
+            type: string
+            length: 255
+            nullable: true
+        searchingInterest:
+            type: string
+            length: 255
+        searchingAge:
+            type: array
+            length: 255
+        date:
+            type: datetime
+            length: 255
+    lifecycleCallbacks: {  }

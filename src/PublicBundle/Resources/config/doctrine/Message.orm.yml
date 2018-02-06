@@ -1,0 +1,34 @@
+PublicBundle\Entity\Message:
+    type: entity
+    table: null
+    repositoryClass: PublicBundle\Repository\MessageRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        idSender:
+            type: string
+            length: 255
+        idReceiver:
+            type: string
+            length: 255
+        messageText:
+            type: text
+            nullable: true
+        messageImage:
+            type: string
+            length: 255
+            nullable: true
+        dateMessageSend:
+            type: datetime
+            nullablue: false
+        flag:
+            type: boolean
+            nullable: false
+        messageEnabled:
+            type: boolean
+            nullable: false
+    lifecycleCallbacks: {  }

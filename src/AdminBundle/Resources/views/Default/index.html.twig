@@ -1,0 +1,66 @@
+{% extends "PublicBundle::layout.html.twig" %}
+
+{% block body %}
+    <div class="col-md-1"></div>
+    <div class="col-md-8"><h1>Administration
+        </h1></div>
+    <div class="col-md-2"><h1><a href="{{ path('fos_user_security_logout')}} ">logout</a></h1>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="clearfix"></div>
+
+
+    </div>
+    <div class="col-md-1"></div>
+    <div class="clearfix"></div>
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+    <div class="panel panel-primary">
+    <div class="panel-heading">
+    <h1>Messages</h1>
+    </div>
+    <div class="panel-body">
+    <a href="{{ path('admin')}}">Actualiser</a>
+<table class="messages">
+    <thead>
+    <tr>
+        <th>id du message</th>
+        <th>Expéditeur</th>
+        <th>Contenu texte</th>
+        <th>Contenu img</th>
+        <th>Date</th>
+        <th>Signalement</th>
+        <th>Sanctionner</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for message in messages %}
+        <tr>
+            <td>{{message.id}}</td>
+            <td>{{message.idSender}}</td>
+            <td>{% if message.messageText %}{{message.messageText }}{% endif %}</td>
+            <td>{% if message.messageImage %}<a href="/web/uploads/images/{{message.messageImage}}" target="_blank"><img src="/web/uploads/images/{{message.messageImage}}" alt="" height="42" width="42" /></a>{% endif %}</td>
+            <td>{{message.dateMessageSend |date('Y-m-d')}}</td>
+
+
+            <td><p class="btn btn-danger">
+                    le message a ete signalé</p>
+            </td>
+            <td><a href="{{ path('adminBanUser', {'id': message.idSender}) }}  "target="_blank">
+                    ban l'utilisateur
+                </a></td>
+
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    </div>
+    </div>
+<div class="text-center">{{ knp_pagination_render(messages) }}</div>
+    </div>
+    <div class="col-md-1"></div>
+
+    <div class="clearfix"></div>
+
+{% endblock body %}
